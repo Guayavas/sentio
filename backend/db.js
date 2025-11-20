@@ -1,12 +1,12 @@
 const { Pool } = require('pg');
 
 // Configuración de la conexión a PostgreSQL
-// Estos valores deben coincidir con el docker-compose.yml
+// IMPORTANTE: Si tu contraseña de PostgreSQL es diferente, cámbiala aquí.
 const pool = new Pool({
-    user: 'user',
-    host: 'localhost', // Si se corre localmente con el puerto expuesto. Si se corre dentro de docker, usar 'db'
-    database: 'sentio_db',
-    password: 'password',
+    user: 'postgres',       // Usuario por defecto en Windows suele ser 'postgres'
+    host: 'localhost',
+    database: 'sentio_db',  // Debes crear esta base de datos en pgAdmin
+    password: 'root',       // CAMBIA ESTO por la contraseña que pusiste al instalar Postgres
     port: 5432,
 });
 
