@@ -1,0 +1,14 @@
+<div class="flex justify-content-between align-items-center px-5 py-2" style="background-color: #009944; color: white;">
+    <div class="flex align-items-center gap-3">
+        <i class="pi pi-folder-open" style="font-size: 2rem;"></i>
+        <div class="flex flex-column">
+            <span class="font-bold text-xl">SentioApp</span>
+            <span class="text-sm">Bienestar Estudiantil</span>
+        </div>
+    </div>
+    <div class="flex align-items-center gap-3">
+        <button pButton label="Inicio" icon="pi pi-home" class="p-button-outlined text-white border-white" [routerLink]="['/home']"></button>
+        <button pButton label="Perfil" icon="pi pi-user" class="p-button-text text-white" [routerLink]="['/profile']"></button>
+        <button pButton label="Cerrar Sesión" icon="pi pi-sign-out" class="p-button-text text-white" (click)="logout()"></button>
+    </div>
+</div>
